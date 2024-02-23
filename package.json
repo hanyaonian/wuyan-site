@@ -1,0 +1,49 @@
+{
+  "name": "wuyan-site",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A nestjs project for personal website",
+  "scripts": {
+    "prepare": "husky",
+    "lint": "eslint . --fix",
+    "build": "remix build",
+    "serve": "remix dev -c \"node server/server.mjs\"",
+    "format": "prettier . --write"
+  },
+  "keywords": [
+    "Blog",
+    "Next.js",
+    "Personal Websites"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,tsx,ts,md,json}": "prettier --write",
+    "*.{js,ts}": "eslint --fix",
+    "*.{scss,css}": "stylelint"
+  },
+  "author": "michaelhan",
+  "license": "ISC",
+  "dependencies": {
+    "@remix-run/express": "^2.7.2",
+    "@remix-run/node": "^2.7.2",
+    "@remix-run/react": "^2.7.2",
+    "express": "^4.18.2",
+    "isbot": "^4.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^18.6.2",
+    "@remix-run/dev": "^2.7.2",
+    "@types/react": "^18.2.58",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "commitlint": "^18.6.1",
+    "eslint": "^8.56.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "typescript": "^5.3.3"
+  }
+}
