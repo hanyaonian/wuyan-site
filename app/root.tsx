@@ -1,4 +1,9 @@
 import { Links, LiveReload, Meta, Outlet, Scripts } from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/node";
+import stylesheet from "./tailwind.css";
+
+// @ts-ignore
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: stylesheet }];
 
 export default function App() {
   return (
@@ -9,7 +14,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <h1>Hello world! 123</h1>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <Outlet />
 
         <Scripts />

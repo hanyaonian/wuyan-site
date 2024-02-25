@@ -1,3 +1,5 @@
-.eslintrc.js
-prettier.config.js
-commitlint.config.js
+# .eslintrc.js
+# prettier.config.js
+# commitlint.config.js
+
+*.js

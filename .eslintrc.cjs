@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   parser: "@typescript-eslint/parser",
   /* @see {link https://typescript-eslint.io/getting-started/typed-linting/} */
   extends: [
@@ -9,6 +9,17 @@ export default {
     project: "tsconfig.eslint.json",
     tsconfigRootDir: __dirname,
     sourceType: "module",
+  },
+  env: {
+    browser: true,
+    node: true,
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
   },
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
